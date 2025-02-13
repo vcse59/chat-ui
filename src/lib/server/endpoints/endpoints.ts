@@ -7,6 +7,7 @@ import endpointAws, { endpointAwsParametersSchema } from "./aws/endpointAws";
 import { endpointOAIParametersSchema, endpointOai } from "./openai/endpointOai";
 import endpointLlamacpp, { endpointLlamacppParametersSchema } from "./llamacpp/endpointLlamacpp";
 import endpointOllama, { endpointOllamaParametersSchema } from "./ollama/endpointOllama";
+import endpointCopilot, { endpointCopilotParametersSchema } from "./CopilotStudio/endpointCopilotStudio";
 import endpointVertex, { endpointVertexParametersSchema } from "./google/endpointVertex";
 import endpointGenAI, { endpointGenAIParametersSchema } from "./google/endpointGenAI";
 import { endpointBedrock, endpointBedrockParametersSchema } from "./aws/endpointBedrock";
@@ -70,6 +71,7 @@ export const endpoints = {
 	openai: endpointOai,
 	llamacpp: endpointLlamacpp,
 	ollama: endpointOllama,
+	CopilotStudio: endpointCopilot,
 	vertex: endpointVertex,
 	genai: endpointGenAI,
 	cloudflare: endpointCloudflare,
@@ -86,6 +88,7 @@ export const endpointSchema = z.discriminatedUnion("type", [
 	endpointTgiParametersSchema,
 	endpointLlamacppParametersSchema,
 	endpointOllamaParametersSchema,
+	endpointCopilotParametersSchema,
 	endpointVertexParametersSchema,
 	endpointGenAIParametersSchema,
 	endpointCloudflareParametersSchema,

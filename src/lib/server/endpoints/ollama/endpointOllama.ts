@@ -24,7 +24,7 @@ export function endpointOllama(input: z.input<typeof endpointOllamaParametersSch
 
 		const parameters = { ...model.parameters, ...generateSettings };
 
-		const requestInfo = await fetch(`${url}/api/tags`, {
+		/*const requestInfo = await fetch(`${url}/api/tags`, {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",
@@ -47,7 +47,7 @@ export function endpointOllama(input: z.input<typeof endpointOllamaParametersSch
 			});
 
 			throw new Error("Currently pulling model from Ollama, please try again later.");
-		}
+		}*/
 
 		const r = await fetch(`${url}/api/generate`, {
 			method: "POST",
